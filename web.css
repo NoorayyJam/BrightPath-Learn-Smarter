@@ -1,0 +1,379 @@
+/* ========== GLOBAL BASE ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background: #fff;
+    color: #222;
+    line-height: 1.6;
+  }
+  
+  /* ========== NAVBAR ========== */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 60px;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    font-size: 26px;
+    font-weight: 700;
+  }
+  
+  .logo a, 
+  .logo {
+    color: #00bfa6;
+    text-decoration: none;
+  }
+  /* Navbar Links & Dropdown */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links a,
+.dropdown > a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 6px 0;
+  display: inline-block;
+  transition: color 0.3s;
+}
+
+.nav-links a.active,
+.nav-links a:hover,
+.dropdown > a:hover {
+  color: #00bfa6;
+}
+
+/* Dropdown Wrapper */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown >a{
+    text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 6px 0;
+  display: inline-block;
+  transition: color 0.3s;
+}
+.dropdown > a:hover{
+  color:#00bfa6;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%; /* aligns just below the link */
+  left: 0;
+  min-width: 220px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 6px 0;
+  z-index: 1000;
+}
+
+/* Dropdown Items */
+.dropdown-content a {
+  display: block;
+  width: 100%;
+  padding: 10px 18px;
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background 0.3s, color 0.3s;
+}
+
+.dropdown-content a:hover {
+  background: #f9f9f9;
+  color: #00bfa6;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+  
+  /* ========== HERO SECTION ========== */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 80vh;
+    padding: 0 20px;
+    background: #f9f9f9;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 700px;
+    margin-bottom: 30px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #00bfa6;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn:hover {
+    background: #008c7a;
+    transform: translateY(-3px);
+  }
+  
+  /* Divider */
+  .divider {
+    border: none;
+    height: 1px;
+    background: #e0e0e0;
+    margin: 50px auto;
+    max-width: 85%;
+  }
+  
+  /* ========== CONTAINER (OVERVIEW TEXT) ========== */
+  .container {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .container h2 {
+    font-size: 2rem;
+    color: #111;
+    margin-bottom: 20px;
+  }
+  
+  .container p {
+    font-size: 1.1rem;
+    color: #444;
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.7;
+  }
+  
+  /* ========== WHAT YOU’LL LEARN ========== */
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin: 40px auto;
+    max-width: 1100px;
+  }
+  
+  .card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: all 0.3s ease;
+    text-align: left;
+    min-height: 250px;
+  }
+  
+  .card h3 {
+    color: #00bfa6;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+  }
+  
+  .card p {
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.6;
+    flex-grow: 1;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.15);
+  }
+  
+  /* ========== JOBS OFFERED ========== */
+  .jobs {
+    text-align: center;
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 20px;
+  }
+  
+  .job-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+    align-items: stretch; /* cards same height */
+  }
+  
+  .job-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* pushes h3 down */
+    height: 100%; /* ensure equal height */
+  }
+  
+  .job-card img {
+    max-width: 200px;
+    height: 240px; /* fix equal height for images */
+    margin: 0 auto 15px auto;
+    object-fit: contain; /* keep image ratio safe */
+  }
+  
+  .job-card h3 {
+    font-size: 1.1rem;
+    color: #00bfa6;
+    margin-top: auto; /* always stays aligned */
+  }
+    
+  .job-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .instructors {
+    text-align: center;
+    margin: 60px auto;
+    max-width: 1100px;
+    padding: 0 20px;
+  }
+  
+  .instructors h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #111;
+  }
+  
+  .instructor-intro {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+  
+  .instructor-grid {
+    display: flex;
+    justify-content: center; /* center cards */
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .instructor-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .instructor-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%; /* makes image circle */
+    margin-bottom: 15px;
+  }
+  
+  .instructor-card h3 {
+    color: #00bfa6;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+  }
+  
+  .instructor-card p {
+    color: #555;
+    font-size: 0.95rem;
+  }
+  
+  .instructor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.15);
+  }
+  
+  
+  /* ========== CTA SECTION ========== */
+  .cta {
+    background-color: #00796b;
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+  }
+  
+  .cta h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .cta p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .cta .btn {
+    background: #ffffff;
+    color: #00796b;
+    border: 1px solid #ffffff;
+  }
+  
+  .cta .btn:hover {
+    background: transparent;
+    color: #ffffff;
+    transform: translateY(-3px);
+  }
+  
+  /* AOS Animation Base */
+  [data-aos] {
+    opacity: 0;
+    transition-property: transform, opacity;
+  }
+  
+  [data-aos].aos-animate {
+    opacity: 1;
+  }
+  
