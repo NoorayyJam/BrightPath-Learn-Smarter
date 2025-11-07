@@ -53,6 +53,7 @@
   display: flex;
   align-items: center;
   gap: 25px;
+    transition: all 0.3 sec ease-in-out;
 }
 
 .nav-links a,
@@ -391,3 +392,4 @@
 
     
     
+
